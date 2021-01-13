@@ -29,7 +29,7 @@ Apple uses it in all of their apps, but unfortunately they don't make it availab
 
 # Installation
 
-The preferred way of installing BottomSheet is via the [Swift Package Manager](https://swift.org/package-manager/).
+The preferred way of installing FirstOpenViews is via the [Swift Package Manager](https://swift.org/package-manager/).
 
 >Xcode 11 integrates with libSwiftPM to provide support for iOS, watchOS, and tvOS platforms.
 
