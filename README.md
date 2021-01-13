@@ -232,12 +232,12 @@ struct TestApp: App {
 
 # Contributing
 
-BottomSheet welcomes contributions in the form of GitHub issues and pull-requests.
+FirstOpenViews welcomes contributions in the form of GitHub issues and pull-requests.
 
 # License
 
-BottomSheet is available under the MIT license. See [the LICENSE file](LICENSE) for more information.
+FirstOpenViews is available under the MIT license. See [the LICENSE file](LICENSE) for more information.
 
 # Credits
 
-BottomSheet is a project of [@LucasMucGH](https://github.com/LucasMucGH).
+FirstOpenViews is a project of [@LucasMucGH](https://github.com/LucasMucGH).
