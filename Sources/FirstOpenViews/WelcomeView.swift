@@ -14,7 +14,7 @@ struct WelcomeView: ViewModifier {
     var informationDetailViews: [InformationDetailView]
     
     @State private var savedAppVersion: String? = UserDefaults.standard.string(forKey: "savedAppVersion")
-    @State private var showWelcomeView: Bool = true
+    @State private var showWelcomeView: Bool = false
     
     func body(content: Content) -> some View {
         content
