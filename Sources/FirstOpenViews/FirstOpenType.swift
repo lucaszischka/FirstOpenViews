@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FirstOpenType {
+internal enum FirstOpenType {
     case welcome
     case whatsNew
 }

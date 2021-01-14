@@ -7,19 +7,16 @@
 
 import SwiftUI
 
-struct FirstOpenView: View {
-    
+internal struct FirstOpenView: View {
     
     @Environment(\.presentationMode) private var presentationMode
     
-    var firstOpenType: FirstOpenType
+    internal var firstOpenType: FirstOpenType
+    internal var imageName: String?
+    internal var mainColor: Color
+    internal var informationDetailViews: [InformationDetailView]
     
-    var imageName: String?
-    var mainColor: Color
-    var informationDetailViews: [InformationDetailView]
-    
-    
-    var body: some View {
+    internal var body: some View {
         GeometryReader { geometry in
             VStack {
                 Spacer()

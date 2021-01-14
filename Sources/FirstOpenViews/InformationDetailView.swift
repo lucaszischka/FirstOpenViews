@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct InformationDetailView: View {
+public struct InformationDetailView: View {
     
-    var title: String
-    var subTitle: String
-    var image: Image
-    var mainColor: Color = Color.blue
+    public var title: String
+    public var subTitle: String
+    public var image: Image
+    public var mainColor: Color = Color.blue
     
-    var body: some View {
+    public var body: some View {
         HStack(alignment: .center) {
             image
                 .font(.largeTitle)
@@ -34,7 +34,6 @@ struct InformationDetailView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
-        
         .padding(.top)
     }
 }
