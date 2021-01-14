@@ -12,7 +12,7 @@ public struct InformationDetailView: View {
     public var title: String
     public var subTitle: String
     public var image: Image
-    public var mainColor: Color = Color.blue
+    public var mainColor: Color
     
     public var body: some View {
         HStack(alignment: .center) {
@@ -35,6 +35,13 @@ public struct InformationDetailView: View {
             }
         }
         .padding(.top)
+    }
+    
+    public init(title: String, subTitle: String, image: Image, mainColor: Color = Color.blue) {
+        self.title = title
+        self.subTitle = subTitle
+        self.image = image
+        self.mainColor = mainColor
     }
 }
 
