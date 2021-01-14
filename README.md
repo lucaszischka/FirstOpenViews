@@ -166,6 +166,7 @@ InformationDetailView(
 ````swift
 import UIKit
 import SwiftUI
+import FirstOpenViews
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -209,6 +210,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 ````swift
 import SwiftUI
+import FirstOpenViews
 
 @main
 struct TestApp: App {
