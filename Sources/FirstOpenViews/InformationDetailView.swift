@@ -8,7 +8,6 @@
 import SwiftUI
 
 public struct InformationDetailView: View {
-    
     public var title: String
     public var subTitle: String
     public var image: Image
@@ -16,19 +15,19 @@ public struct InformationDetailView: View {
     
     public var body: some View {
         HStack(alignment: .center) {
-            image
+            self.image
                 .font(.largeTitle)
-                .foregroundColor(mainColor)
+                .foregroundColor(self.mainColor)
                 .padding()
                 .accessibility(hidden: true)
             
             VStack(alignment: .leading) {
-                Text(title)
+                Text(self.title)
                     .font(.headline)
                     .foregroundColor(.primary)
                     .accessibility(addTraits: .isHeader)
                 
-                Text(subTitle)
+                Text(self.subTitle)
                     .font(.body)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)

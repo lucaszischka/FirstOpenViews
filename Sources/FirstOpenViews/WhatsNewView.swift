@@ -19,20 +19,19 @@ fileprivate struct WhatsNewView: ViewModifier {
     
     fileprivate func body(content: Content) -> some View {
         content
-            .onAppear(perform: checkForUpdate)
-            .background(EmptyView()
-            .sheet(isPresented: self.$showWhatsNewView, content: {
-                FirstOpenView(firstOpenType: .whatsNew, imageName: self.imageName, mainColor: self.mainColor, informationDetailViews: self.informationDetailViews)
-            })
+            .onAppear(perform: self.checkForUpdate)
+            .background(
+                EmptyView()
+                    .sheet(isPresented: self.$showWhatsNewView, content: {
+                        FirstOpenView(firstOpenType: .whatsNew, imageName: self.imageName, mainColor: self.mainColor, informationDetailViews: self.informationDetailViews)
+                    })
             )
     }
     
     private func checkForUpdate() {
         let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
         
-        if self.savedAppVersion == nil {
-            //
-        } else if self.savedAppVersion != currentAppVersion {
+        if let savedAppVersion = self.savedAppVersion, let currentAppVersion = currentAppVersion, savedAppVersion != currentAppVersion {
             self.showWhatsNewView = true
             UserDefaults.standard.set(currentAppVersion, forKey: "savedAppVersion")
             self.savedAppVersion = currentAppVersion

@@ -21,29 +21,31 @@ internal struct FirstOpenView: View {
             VStack {
                 Spacer()
                 
-                if imageName != nil {
-                    Image(imageName!)
+                if let imageName = self.imageName {
+                    Image(imageName)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 0.3*geometry.size.width)
-                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .frame(width: 0.3 * geometry.size.width)
+                        .cornerRadius(25)
                         .accessibility(hidden: true)
                 }
                 
-                Text(firstOpenType == .welcome ? "Welcome to" : "What's New in")
+                Text(self.firstOpenType == .welcome ? "Welcome to" : "What's New in")
                     .fontWeight(.black)
                     .font(.system(size: 36))
                 
-                Text(Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? "")
-                    .foregroundColor(mainColor)
-                    .fontWeight(.black)
-                    .font(.system(size: 36))
+                if let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String {
+                    Text(appName)
+                        .foregroundColor(self.mainColor)
+                        .fontWeight(.black)
+                        .font(.system(size: 36))
+                }
                 
                 Spacer()
                 
                 VStack(alignment: .leading) {
-                    ForEach(0..<informationDetailViews.count) { index in
-                        informationDetailViews[index]
+                    ForEach(0..<self.informationDetailViews.count) { index in
+                        self.informationDetailViews[index]
                     }
                 }
                 .padding(.horizontal)
@@ -63,7 +65,7 @@ internal struct FirstOpenView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                         .background(
                             RoundedRectangle(cornerRadius: 15, style: .continuous)
-                                .fill(mainColor)
+                                .fill(self.mainColor)
                         )
                         .padding([.bottom, .horizontal])
                 }

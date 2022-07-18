@@ -1,9 +1,9 @@
-![SwiftUI FirstOpenViews](Asset/logo.png)
-======================================
+# FirstOpenViews
 
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/release/LucasMucGH/FirstOpenViews?sort=semver)](https://github.com/LucasMucGH/FirstOpenViews/releases)
-[![License](https://img.shields.io/github/license/LucasMucGH/FirstOpenViews)](https://github.com/LucasMucGH/FirstOpenViews/blob/main/LICENSE)
-[![Issues](https://img.shields.io/github/issues/LucasMucGH/FirstOpenViews)](https://github.com/LucasMucGH/FirstOpenViews/issues)
+[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
+[![GitHub version](https://img.shields.io/github/v/release/lucaszischka/FirstOpenViews?sort=semver)](https://github.com/lucaszischka/FirstOpenViews/releases)
+[![License](https://img.shields.io/github/license/lucaszischka/FirstOpenViews)](https://github.com/lucaszischka/FirstOpenViews/blob/main/LICENSE.txt)
+[![Issues](https://img.shields.io/github/issues/lucaszischka/FirstOpenViews)](https://github.com/lucaszischka/FirstOpenViews/issues)
 
 A sheet to introduce the user to your app and to welcome them or to inform them about new features after an update.
 
@@ -24,7 +24,7 @@ Apple uses it in all of their apps, but unfortunately they don't make it availab
 # Requirements 
 
 - iOS 13
-- Swift 5.3
+- Swift 5.1
 - Xcode 12
 
 # Installation
@@ -34,7 +34,7 @@ The preferred way of installing FirstOpenViews is via the [Swift Package Manager
 >Xcode 11 integrates with libSwiftPM to provide support for iOS, watchOS, and tvOS platforms.
 
 1. In Xcode, open your project and navigate to **File** → **Swift Packages** → **Add Package Dependency...**
-2. Paste the repository URL (`https://github.com/LucasMucGH/FirstOpenViews`) and click **Next**.
+2. Paste the repository URL (`https://github.com/lucaszischka/FirstOpenViews`) and click **Next**.
 3. For **Rules**, select **Branch** (with branch set to `main`).
 4. Click **Finish**.
 
@@ -238,8 +238,8 @@ FirstOpenViews welcomes contributions in the form of GitHub issues and pull-requ
 
 # License
 
-FirstOpenViews is available under the MIT license. See [the LICENSE file](LICENSE) for more information.
+FirstOpenViews is available under the MIT license. See [the LICENSE file](LICENSE.txt) for more information.
 
 # Credits
 
-FirstOpenViews is a project of [@LucasMucGH](https://github.com/LucasMucGH).
+FirstOpenViews is a project of [@lucaszischka](https://github.com/lucaszischka).

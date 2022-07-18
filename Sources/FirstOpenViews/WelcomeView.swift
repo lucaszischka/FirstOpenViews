@@ -19,23 +19,22 @@ fileprivate struct WelcomeView: ViewModifier {
     
     fileprivate func body(content: Content) -> some View {
         content
-            .onAppear(perform: checkForUpdate)
-            .background(EmptyView()
-            .sheet(isPresented: self.$showWelcomeView, content: {
-                FirstOpenView(firstOpenType: .welcome, imageName: self.imageName, mainColor: self.mainColor, informationDetailViews: self.informationDetailViews)
-            })
+            .onAppear(perform: self.checkForUpdate)
+            .background(
+                EmptyView()
+                    .sheet(isPresented: self.$showWelcomeView, content: {
+                        FirstOpenView(firstOpenType: .welcome, imageName: self.imageName, mainColor: self.mainColor, informationDetailViews: self.informationDetailViews)
+                    })
             )
     }
     
     private func checkForUpdate() {
         let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
         
-        if self.savedAppVersion == nil {
+        if let currentAppVersion = currentAppVersion, self.savedAppVersion == nil {
             self.showWelcomeView = true
             UserDefaults.standard.set(currentAppVersion, forKey: "savedAppVersion")
             self.savedAppVersion = currentAppVersion
-        } else if self.savedAppVersion != currentAppVersion {
-            //
         }
     }
 }
